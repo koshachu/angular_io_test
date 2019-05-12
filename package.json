@@ -1,0 +1,20 @@
+{
+  "name": "sample_ptr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "spec.js",
+  "scripts": {
+    "test": "node_modules/protractor/bin/protractor ../../protractor.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.12",
+    "@types/jasminewd2": "^2.0.6",
+    "protractor-jasmine2-html-reporter": "0.0.7"
+  },
+  "dependencies": {
+    "protractor": "^5.4.2",
+    "webdriver-manager": "^13.0.0"
+  }
+}
