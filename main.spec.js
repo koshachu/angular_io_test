@@ -37,5 +37,20 @@ describe('testing angular.io navigation', function () {
 
         expect(browser.getCurrentUrl()).toBe('https://angular.io/guide/architecture');
     });
+   
+    /**should check the "Search" function 
+     * by key "protractor"
+     * expecting the result "ng e2e" to show up
+    */
+   it('should check search function', function(){
+       element(by.xpath('//input[@placeholder="Search"]')).click();
+       element(by.xpath('//input[@placeholder="Search"]')).sendKeys('protractor');
+       browser.actions().sendKeys(protractor.Key.ENTER).perform();
+       browser.sleep(1000);
+       expect(element(by.xpath('//span[text() = "ng e2e"]')).isPresent()).toBe(true);
+   });
+   
 }
+   
 );
+    
